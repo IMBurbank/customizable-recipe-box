@@ -1,0 +1,231 @@
+/**
+	*
+	*		Styling written using SASS preprocessor
+	*
+	*/
+
+
+/**
+	*		Variables
+	*/
+
+$pg-width: 100vw
+$min-screen-width: 375px
+$prim-color: #406ABA
+$prim-back-color: rgb(210,220,220)
+$sec-back-color: rgb(245,250,250)
+$prim-font-color: white
+$sec-font-color: rgba(20,40,60,0.8)
+$prim-font: 'Muli', sans-serif
+$head-font: 'Mada', sans-serif
+$prim-bord-w: 1px
+$prim-bord-s: solid
+$prim-bord-c: lightgrey
+$prim-bord: $prim-bord-w $prim-bord-s $prim-bord-c
+$lg-pad: 1rem
+$md-pad: 0.5rem
+$sm-pad: 0.25rem
+
+
+/**
+	*		Mixins
+	*/
+
+=head-foot-style($height, $justify)
+	display: flex
+	position: relative
+	flex-shrink: 0
+	justify-content: $justify
+	align-items: center
+	width: $pg-width
+	min-width: $min-screen-width
+	height: $height
+	min-height: 2rem
+	margin: 0
+	text-align: center
+	background-color: $prim-color
+	color: $prim-font-color
+
+
+/**
+	*		Page Styling
+	*/
+
+// reset sass
+html,
+body,
+ul,
+ol,
+h1, h2, h3, h4
+	margin:  0
+	padding: 0
+
+html,
+body,
+pg
+	min-width: $min-screen-width
+	overflow: hidden
+	font-family: $prim-font
+
+.btn-default
+	background: rgb(244,244,244)
+	border: $prim-bord-w $prim-bord-s rgb(192,192,192)
+	color: $sec-font-color
+	&:hover
+		background: rgb(232,232,232)
+
+.btn-primary
+	background: $prim-color
+
+.btn-info
+	background: #50D0E8
+
+.btn-danger
+	background: #E86850
+
+.pg
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	height: 100vh
+	width: $pg-width
+
+.pg-header
+	+head-foot-style(7.5vh, center)
+
+.content
+	display: flex
+	flex-direction: column
+	overflow-x: hidden
+	overflow-y: auto
+	align-items: center
+	flex-grow: 1
+	padding: $lg-pad 0
+	width: 100%
+	background: $prim-back-color
+	color: $sec-font-color
+
+.recipe-box
+	width: 80vw
+	min-width: $min-screen-width
+	max-width: 50rem
+	padding: $lg-pad
+	border: $prim-bord
+	border-radius: $sm-pad / 2
+	background: $sec-back-color
+
+.recipe-data
+	margin: $lg-pad 0
+	border-width: $prim-bord-w 0
+	border-style: $prim-bord-s
+	border-color: $prim-bord-c
+
+.recipe-output
+	flex-grow: 1
+	margin: $lg-pad 0
+
+	.empty-msg
+		color: grey
+
+.recipe-row
+	margin: $sm-pad 0
+	width: 100%
+	background: rgba(255,255,255,0.4)
+
+	.recipe-name
+		width: 100%
+		text-align: left
+		background: #E4F2FF
+		border: $prim-bord
+		border-radius: $sm-pad / 2
+		color: $sec-font-color
+
+	.recipe-details
+		padding: $lg-pad
+		border-width: 0 $prim-bord-w $prim-bord-w
+		border-style: $prim-bord-s
+		border-color: $prim-bord-c
+		border-radius: 0 0 $sm-pad $sm-pad
+
+	.ing-list
+		background: #FDF9F7
+		border: $prim-bord
+		border-radius: $sm-pad / 2
+
+	.ingredient
+		padding: $sm-pad $sm-pad $md-pad
+		font-size: 90%
+
+	.ingredient:nth-child(n + 2)
+		border-top: $prim-bord
+
+	.recipe-btns
+		margin: $lg-pad 0 0
+
+		.edit-btn
+			display: inline-block
+			margin-right: $lg-pad
+
+		.delete-btn
+			display: inline-block
+
+.add-btn
+	margin: 0
+
+.dialog-container
+	z-index: 10
+	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	margin: 0
+	height: 100vh
+	width: $pg-width
+	background: rgba(0,0,0,0.4)
+
+	.dialog-box
+		width: $pg-width * 0.6
+		max-width: 30rem
+		min-width: $min-screen-width
+		background: white
+		border-radius: $sm-pad
+
+		.dialog-heading
+			margin: $md-pad
+			padding-bottom: $md-pad
+			text-align: center
+			font-weight: bold
+			font-size: 110%
+			border-bottom: $prim-bord
+
+		.dform-container
+			margin: $lg-pad
+
+		label
+			display: block
+			margin: 0
+
+		input, textarea
+			width: 100%
+			margin-bottom: $md-pad
+			padding: $sm-pad $md-pad
+			border: $prim-bord
+			border-radius: $sm-pad
+			font-family: $prim-font
+			font-size: 90%
+			color: lighten($sec-font-color,10%)
+
+		.dialog-btns
+			text-align: right
+
+		.dialog-add-btn
+			margin-right: $lg-pad
+
+.pg-footer
+	+head-foot-style(5vh, center)
+
+	.pg-author
+		margin-right: $lg-pad

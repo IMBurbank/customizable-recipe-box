@@ -1,0 +1,240 @@
+/**
+	*
+	*		Styling written using SASS preprocessor
+	*
+	*/
+/**
+	*		Variables
+	*/
+/**
+	*		Mixins
+	*/
+/**
+	*		Page Styling
+	*/
+html,
+body,
+ul,
+ol,
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0; }
+
+html,
+body,
+pg {
+  min-width: 375px;
+  overflow: hidden;
+  font-family: "Muli", sans-serif; }
+
+.btn-default {
+  background: #f4f4f4;
+  border: 1px solid silver;
+  color: rgba(20, 40, 60, 0.8); }
+  .btn-default:hover {
+    background: #e8e8e8; }
+
+.btn-primary {
+  background: #406ABA; }
+
+.btn-info {
+  background: #50D0E8; }
+
+.btn-danger {
+  background: #E86850; }
+
+.pg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw; }
+
+.pg-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-width: 375px;
+  height: 7.5vh;
+  min-height: 2rem;
+  margin: 0;
+  text-align: center;
+  background-color: #406ABA;
+  color: white; }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem 0;
+  width: 100%;
+  background: #d2dcdc;
+  color: rgba(20, 40, 60, 0.8); }
+
+.recipe-box {
+  width: 80vw;
+  min-width: 375px;
+  max-width: 50rem;
+  padding: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.125rem;
+  background: #f5fafa; }
+
+.recipe-data {
+  margin: 1rem 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: lightgrey; }
+
+.recipe-output {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1rem 0; }
+  .recipe-output .empty-msg {
+    color: grey; }
+
+.recipe-row {
+  margin: 0.25rem 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4); }
+  .recipe-row .recipe-name {
+    width: 100%;
+    text-align: left;
+    background: #E4F2FF;
+    border: 1px solid lightgrey;
+    border-radius: 0.125rem;
+    color: rgba(20, 40, 60, 0.8); }
+  .recipe-row .recipe-details {
+    padding: 1rem;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-radius: 0 0 0.25rem 0.25rem; }
+  .recipe-row .ing-list {
+    background: #FDF9F7;
+    border: 1px solid lightgrey;
+    border-radius: 0.125rem; }
+  .recipe-row .ingredient {
+    padding: 0.25rem 0.25rem 0.5rem;
+    font-size: 90%; }
+  .recipe-row .ingredient:nth-child(n + 2) {
+    border-top: 1px solid lightgrey; }
+  .recipe-row .recipe-btns {
+    margin: 1rem 0 0; }
+    .recipe-row .recipe-btns .edit-btn {
+      display: inline-block;
+      margin-right: 1rem; }
+    .recipe-row .recipe-btns .delete-btn {
+      display: inline-block; }
+
+.add-btn {
+  margin: 0; }
+
+.dialog-container {
+  z-index: 10;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4); }
+  .dialog-container .dialog-box {
+    width: 60vw;
+    max-width: 30rem;
+    min-width: 375px;
+    background: white;
+    border-radius: 0.25rem; }
+    .dialog-container .dialog-box .dialog-heading {
+      margin: 0.5rem;
+      padding-bottom: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 110%;
+      border-bottom: 1px solid lightgrey; }
+    .dialog-container .dialog-box .dform-container {
+      margin: 1rem; }
+    .dialog-container .dialog-box label {
+      display: block;
+      margin: 0; }
+    .dialog-container .dialog-box input, .dialog-container .dialog-box textarea {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid lightgrey;
+      border-radius: 0.25rem;
+      font-family: "Muli", sans-serif;
+      font-size: 90%;
+      color: rgba(33, 66, 98, 0.8); }
+    .dialog-container .dialog-box .dialog-btns {
+      text-align: right; }
+    .dialog-container .dialog-box .dialog-add-btn {
+      margin-right: 1rem; }
+
+.pg-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-width: 375px;
+  height: 5vh;
+  min-height: 2rem;
+  margin: 0;
+  text-align: center;
+  background-color: #406ABA;
+  color: white; }
+  .pg-footer .pg-author {
+    margin-right: 1rem; }
+
+/*# sourceMappingURL=main.css.map */
