@@ -649,12 +649,16 @@ var PageFooter = function (_React$Component8) {
 				React.createElement(
 					'span',
 					{ className: 'pg-author' },
-					'By: Isaac Burbank'
+					'\xA9 2017 Isaac Burbank'
 				),
 				React.createElement(
 					'span',
 					{ className: 'pg-copyright' },
-					'\xA9 2017 All right reserved.'
+					React.createElement(
+						'a',
+						{ href: 'https://imburbank.github.io/customizable-recipe-box/', target: '_blank' },
+						'GitHub Repo'
+					)
 				)
 			);
 		}

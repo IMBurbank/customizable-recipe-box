@@ -234,6 +234,8 @@ pg {
   text-align: center;
   background-color: #406ABA;
   color: white; }
+  .pg-footer a {
+    color: white; }
   .pg-footer .pg-author {
     margin-right: 1rem; }
 
