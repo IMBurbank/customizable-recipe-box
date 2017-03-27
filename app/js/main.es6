@@ -435,7 +435,7 @@ class PageFooter extends React.Component {
 			<div className='pg-footer'>
 				<span className='pg-author'>© 2017 Isaac Burbank</span>
 				<span className='pg-copyright'>
-					<a href='https://imburbank.github.io/customizable-recipe-box/' target='_blank'>
+					<a href='https://github.com/IMBurbank/customizable-recipe-box' target='_blank'>
 						GitHub Repo
 					</a>
 				</span>
