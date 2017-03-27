@@ -656,7 +656,7 @@ var PageFooter = function (_React$Component8) {
 					{ className: 'pg-copyright' },
 					React.createElement(
 						'a',
-						{ href: 'https://imburbank.github.io/customizable-recipe-box/', target: '_blank' },
+						{ href: 'https://github.com/IMBurbank/customizable-recipe-box', target: '_blank' },
 						'GitHub Repo'
 					)
 				)
